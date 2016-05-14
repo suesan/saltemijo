@@ -4,12 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "lite": "lite-server",
-    "postinstall": "typings install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings"
+    "start": "npm-run-all --parallel webpack:w lite",
+    "webpack": "webpack --config ./webpack.config.js",
+    "webpack:w": "webpack --config ./webpack.config.js --watch",
+    "lite": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -43,7 +41,10 @@
   "devDependencies": {
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
+    "npm-run-all": "^2.1.0",
+    "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
-    "typings": "^0.8.1"
+    "typings": "^0.8.1",
+    "webpack": "^1.13.0"
   }
 }
