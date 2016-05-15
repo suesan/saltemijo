@@ -1,7 +1,7 @@
 module.exports = {
     entry: ['./app/main.ts'],
     output: {
-        path: './dist/assets/js',
+        path: './assets/js',
         filename: 'client.bundle.js',
         pathinfo: true,
         sourcePrefix: ''
@@ -11,7 +11,11 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /\.tsx?$/, loader: 'ts-loader', exclude: /node_modules/}
+            {
+                test: /\.tsx?$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/
+            }
         ]
     },
     ts: {

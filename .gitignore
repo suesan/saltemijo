@@ -51,7 +51,7 @@ coverage
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
-dist/assets/js/*.bundle.js
+assets/js/*.bundle.js
 
 # Dependency directories
 node_modules

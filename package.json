@@ -39,6 +39,8 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "babel-core": "^6.8.0",
+    "babel-loader": "^6.2.4",
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
     "npm-run-all": "^2.1.0",
